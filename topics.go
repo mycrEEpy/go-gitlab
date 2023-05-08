@@ -22,7 +22,7 @@ import (
 	"io"
 	"net/http"
 
-	retryablehttp "github.com/hashicorp/go-retryablehttp"
+	"github.com/hashicorp/go-retryablehttp"
 )
 
 // TopicsService handles communication with the topics related methods
@@ -41,7 +41,7 @@ type Topic struct {
 	Name               string `json:"name"`
 	Title              string `json:"title"`
 	Description        string `json:"description"`
-	TotalProjectsCount uint64 `json:"total_projects_count"`
+	TotalProjectsCount int64  `json:"total_projects_count"`
 	AvatarURL          string `json:"avatar_url"`
 }
 
